@@ -10,33 +10,18 @@ namespace August
     {
         public static void Test()
         {
-            int m = 4;
-            int n = 3;
-            int sum = 0;
-            int[,] myArr = new int[m, n];
-            Random ran = new Random();
-
-            for (int i = 0; i < m; i++)
+           
+            int[] Arr = { 8, 3, 5, 2, -3 }; 
+            int Arrmin = Arr[0];
+            
+            for (int i = 1; i < Arr.Length; i++)
             {
-                for (int j = 0; j < n; j++)
+                if (Arrmin > Arr[i])
                 {
-                    myArr[i, j] = ran.Next(1, 6);
-                    Console.Write("{0}\t", myArr[i, j]);
+                    Arrmin = Arr[i];
                 }
-                Console.WriteLine();
             }
-
-            
-            //Console.WriteLine(myArr[0, 0]);
-            //Console.WriteLine(myArr[1, 0]);
-            //Console.WriteLine(myArr[2, 0]);
-            //Console.WriteLine(myArr[3, 0]);
-            
-            for (int i = 0; i < m; i++)
-            {
-                Console.Write(myArr[i,0]);
-            }
+            Console.WriteLine(Arrmin);
         }
-
     }
 }
